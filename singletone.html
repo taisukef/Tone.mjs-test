@@ -1,0 +1,13 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width">
+</head><body>
+<button id="play">play</button>
+<script type="module">
+import { Tone } from "https://taisukef.github.io/Tone.js/Tone.mjs";
+
+play.onclick = () => {
+    const synth = new Tone.Synth().toMaster();
+    synth.triggerAttackRelease("C4", "2n"); // C4の音、2分音符
+};
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width">
+</head><body>
+<button id="kick">kick (1)</button>
+<button id="snare">snare (2)</button>
+<button id="hihat">hihat (3)</button>
+<script type="module">
+import { toneKick, toneSnare, toneHihat } from "./drums1.mjs";
+
+kick.onclick = () => {
+    toneKick.play();
+};
+snare.onclick = () => {
+    toneSnare.play();
+};
+hihat.onclick = () => {
+    toneHihat.play();
+};
+document.body.onkeydown = (e) => {
+    if (e.key == "1") {
+        kick.onclick();
+    } else if (e.key == "2") {
+        snare.onclick();
+    } else if (e.key == "3") {
+        hihat.onclick();
+    }
+};
+</script>
+</body>
+</html>
